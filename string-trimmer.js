@@ -1,7 +1,14 @@
 /**
  * Strip whitespace or other characters.
+ * 
+ * @param {String} str The string that will be trimmed.
+ * @param {String} chars Set what kind of chars that needs to be trimmed.
+ * 
+ * @return {String} The trimmed string.
  */
-function StringTrimmer() {}
+function StringTrimmer(str, chars = " \t\n\r\0\x0B") {
+    return StringTrimmer.trim(str, chars);
+}
 
 /**
  * Strip whitespace or other characters from the beginning and end of a 
