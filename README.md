@@ -19,19 +19,24 @@ Import in HTML
 <script src="string-trimmer.js"></script>
 ```
 
-Or in Node.js/Webpack
+Or in Node.js/WebPack
 
 ```javascript
 const StringTrimmer = require("string-trimmer");
 ```
 
 ```javascript
-StringTrimmer.trim("  test  ") //=> "test"
-StringTrimmer.trimLeft("  test  ") //=> "test  "
-StringTrimmer.trimRight("  test  ") //=> "  test"
+StringTrimmer.trim("  test  "); //=> "test"
+StringTrimmer.trimLeft("  test  "); //=> "test  "
+StringTrimmer.trimRight("  test  "); //=> "  test"
  
-StringTrimmer.trim("test", "t") //=> "es"
-StringTrimmer.trim("testing", "ing") //=> "test"
-StringTrimmer.trimLeft("test", "t") //=> "est"
-StringTrimmer.trimRight("test", "t") //=> "tes"
+StringTrimmer.trim("test", "t"); //=> "es"
+StringTrimmer.trim("testing", "ing"); //=> "test"
+StringTrimmer.trimLeft("test", "t"); //=> "est"
+StringTrimmer.trimRight("test", "t"); //=> "tes"
+
+// Optionally, you could apply these methods to String.prototype.
+StringTrimmer.applyTo(String.prototype);
+
+" test ".trim(" t"); //=> "es"
 ```
