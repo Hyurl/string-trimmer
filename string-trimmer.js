@@ -26,7 +26,7 @@ StringTrimmer.trim = function trim(str, chars = " \t\n\r\0\x0B") {
 StringTrimmer.trimLeft = function trim(str, chars = " \t\n\r\0\x0B") {
     chars = chars.split("");
     for (var i = 0; i < str.length; i++) {
-        if (!chars.includes(str[i])) break;
+        if (chars.indexOf(str[i]) === -1) break;
     }
     return str.substring(i);
 }
@@ -42,20 +42,20 @@ StringTrimmer.trimLeft = function trim(str, chars = " \t\n\r\0\x0B") {
 StringTrimmer.trimRight = function trimRight(str, chars = " \t\n\r\0\x0B") {
     chars = chars.split("");
     for (var i = str.length - 1; i >= 0; i--) {
-        if (!chars.includes(str[i])) break;
+        if (chars.indexOf(str[i]) === -1) break;
     }
     return str.substring(0, i + 1);
 }
 
-if (typeof window == 'object') {
+if (typeof window == "object") {
     window.StringTrimmer = StringTrimmer;
-    if (typeof define === 'function') {
+    if (typeof define === "function") {
         //AMD
         define((require, exports, module) => {
             module.exports = StringTrimmer;
         });
     }
-} else if (typeof module === 'object' && module.exports) {
+} else if (typeof module === "object" && module.exports) {
     //CommonJS
     module.exports = StringTrimmer;
 }
