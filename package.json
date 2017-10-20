@@ -1,0 +1,23 @@
+{
+  "name": "string-trimmer",
+  "version": "1.0.0",
+  "description": "Strip whitespace or other characters.",
+  "main": "string-trimmer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyurl/string-trimmer.git"
+  },
+  "keywords": [
+    "trim",
+    "string"
+  ],
+  "author": "Ayon Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hyurl/string-trimmer/issues"
+  },
+  "homepage": "https://github.com/Hyurl/string-trimmer#readme"
+}
