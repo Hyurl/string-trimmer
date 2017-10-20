@@ -5,7 +5,7 @@ var WHITESPACE_CHARS = " \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004" +
  * Strip whitespace or other characters.
  * 
  * @param {String} str The string that will be trimmed.
- * @param {String} [chars] Set what kind of chars that needs to be trimmed.
+ * @param {String} [chars] What kind of chars that needs to be stripped.
  * 
  * @return {String} The trimmed string.g.
  */
@@ -18,7 +18,7 @@ function StringTrimmer(str, chars) {
  * string.
  * 
  * @param {String} str The string that will be trimmed.
- * @param {String} [chars] Set what kind of chars that needs to be trimmed.
+ * @param {String} [chars] What kind of chars that needs to be stripped.
  * 
  * @return {String} The trimmed string.
  */
@@ -31,7 +31,7 @@ StringTrimmer.trim = function trim(str, chars) {
  * Strip whitespace or other characters from the beginning of a string.
  * 
  * @param {String} str The string that will be trimmed.
- * @param {String} [chars] Set what kind of chars that needs to be trimmed.
+ * @param {String} [chars] What kind of chars that needs to be stripped.
  * 
  * @return {String} The trimmed string.
  */
@@ -47,7 +47,7 @@ StringTrimmer.trimLeft = function trim(str, chars) {
  * Strip whitespace or other characters from the end of a string.
  * 
  * @param {String} str The string that will be trimmed.
- * @param {String} [chars] Set what kind of chars that needs to be trimmed.
+ * @param {String} [chars] What kind of chars that needs to be stripped.
  * 
  * @return {String} The trimmed string.
  */
