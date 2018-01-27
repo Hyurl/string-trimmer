@@ -1,10 +1,11 @@
 {
   "name": "string-trimmer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Strip whitespace or other characters.",
   "main": "string-trimmer.js",
+  "types": "string-trimmer.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",

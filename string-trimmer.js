@@ -2,25 +2,26 @@ var WHITESPACE_CHARS = " \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004" +
     "\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000";
 
 /**
- * Strip whitespace or other characters.
+ * Strips whitespace or specified characters at the beginning and the end of a
+ * string.
  * 
- * @param {String} str The string that will be trimmed.
- * @param {String} [chars] What kind of chars that needs to be stripped.
+ * @param {string} str The string that needs to be trimmed.
+ * @param {string} [chars] What kind of chars that needs to be stripped.
  * 
- * @return {String} The trimmed string.g.
+ * @return {string} The trimmed string.
  */
 function StringTrimmer(str, chars) {
     return StringTrimmer.trim(str, chars || WHITESPACE_CHARS);
 }
 
 /**
- * Strip whitespace or other characters from the beginning and end of a 
+ * Strips whitespace or specified characters at the beginning and the end of a
  * string.
  * 
- * @param {String} str The string that will be trimmed.
- * @param {String} [chars] What kind of chars that needs to be stripped.
+ * @param {string} str The string that needs to be trimmed.
+ * @param {string} [chars] What kind of chars that needs to be stripped.
  * 
- * @return {String} The trimmed string.
+ * @return {string} The trimmed string.
  */
 StringTrimmer.trim = function trim(str, chars) {
     chars = chars || WHITESPACE_CHARS;
@@ -28,14 +29,14 @@ StringTrimmer.trim = function trim(str, chars) {
 }
 
 /**
- * Strip whitespace or other characters from the beginning of a string.
+ * Strips whitespace or specified characters at the beginning of a string.
  * 
- * @param {String} str The string that will be trimmed.
- * @param {String} [chars] What kind of chars that needs to be stripped.
+ * @param {string} str The string that needs to be trimmed.
+ * @param {string} [chars] What kind of chars that needs to be stripped.
  * 
- * @return {String} The trimmed string.
+ * @return {string} The trimmed string.
  */
-StringTrimmer.trimLeft = function trim(str, chars) {
+StringTrimmer.trimLeft = function trimLeft(str, chars) {
     chars = (chars || WHITESPACE_CHARS).split("");
     for (var i = 0; i < str.length; i++) {
         if (chars.indexOf(str[i]) === -1) break;
@@ -44,12 +45,12 @@ StringTrimmer.trimLeft = function trim(str, chars) {
 }
 
 /**
- * Strip whitespace or other characters from the end of a string.
+ * Strips whitespace or specified characters at the end of a string.
  * 
- * @param {String} str The string that will be trimmed.
- * @param {String} [chars] What kind of chars that needs to be stripped.
+ * @param {string} str The string that needs to be trimmed.
+ * @param {string} [chars] What kind of chars that needs to be stripped.
  * 
- * @return {String} The trimmed string.
+ * @return {string} The trimmed string.
  */
 StringTrimmer.trimRight = function trimRight(str, chars) {
     chars = (chars || WHITESPACE_CHARS).split("");
@@ -60,9 +61,9 @@ StringTrimmer.trimRight = function trimRight(str, chars) {
 }
 
 /**
- * Apply to an object's prototype, e.g. `String.prototype`.
+ * Apply the functions to an object's prototype, e.g. `String.prototype`.
  * 
- * @param {Object} proto Normally, this should be `String.prototype`.
+ * @param {any} proto Normally, this should be `String.prototype`.
  */
 StringTrimmer.applyTo = function applyTo(proto) {
     proto.trim = function(chars) {
